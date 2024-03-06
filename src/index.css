@@ -1,13 +1,108 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  margin:0;
+  padding:0;
+  background-color: tomato;
+}
+.container{
+  width: 100vw;
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.startContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.startButton{
+  padding:20px;
+  width:300px;
+  font-size:50px;
+  background-color: lightgreen;
+  color:white;
+  border:none;
+  letter-spacing: 1px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 25px;
+  transition:1s;
+}
+.startButton:hover{
+  color:lightslategray;
+  transition:1s;
+  border-radius: 0;
+  cursor: pointer;
+}
+.container .questions{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: lightblue;
+  flex-direction: column;
+  width:50vw;
+}
+.choices{
+  display: flex;
+  flex-direction: column;
+}
+.choices>button{
+  width:100%;
+  padding:15px;
+  margin-top:10px;
+  border:none;
+  font-size:20px;
+  font-weight: 600s;
+  background-color: lightcyan;
+  color:rgb(0, 0, 75);
+}
+.choices>button:disabled{
+  font-weight: 600s;
+  color:rgb(0, 0, 75);
+}
+.choices>button:hover{
+  background-color: rgb(24, 114, 203);
+  color:white;
+  cursor: pointer;
+}
+.question{
+  letter-spacing: 1px;
+  color:darkblue;
+  text-align: center;
+}
+.nextGetresButton{
+  width:50vw;
+  background-color: green;
+  text-align: center;
+  position: absolute;
+  top:560px;
+}
+.nextGetresButton>button{
+  width:100%;
+  padding:20px;
+  border: none;
+  font-size:25px;
+  background-color: lightcyan;
+  color:rgb(0, 0, 75);
+}
+.nextGetresButton>button:hover{
+  cursor:pointer;
+  background-color: rgb(24, 114, 203);
+  color:white;
+}
+.finishcontent{
+  flex-direction:column;
+  letter-spacing: 1px;
+  color:white;
+  font-size:38px;
+}
+@media only screen and (max-width:800px) {
+  .question{
+      font-size:20px;
+  }
+}
+@media only screen and (max-height:600px){
+  .nextGetresButton{
+      top:480px;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
